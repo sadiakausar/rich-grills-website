@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Duo Kitchen - Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="pictures/favicon-removebg-preview.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: "Karla",sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        .contact-us h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .detail {
+            text-align: center;
+            flex: 1 1 300px;
+            max-width: 300px;
+            background-color: #e7d7c0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .detail img {
+            width: 40px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .detail h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #543A14;
+        }
+
+        .detail p {
+            font-size: 0.95em;
+            color: #795d3c;
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+
+        .detail a {
+            color: #795d3c;
+        }
+
+       .map-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .contact-container {
+            display: flex;
+            width: 100%;
+            height: 80vh;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            align-items: center;
+            gap: 0;
+        }
+
+        .contact-image {
+            flex: 1;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-image img {
+            border-radius: 40px;
+            max-width: 510px;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            margin: 50px auto;
+        }
+
+        .contact-form {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .contact-form label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #c9a063;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 40px;
+        }
+
+        .contact-form button:hover {
+            background: #543A14;
+            color: #FFF0DC;
+        }
+
+        @media (max-width: 768px) {
+            .map-container iframe {
+                width: 100%;
+                height: 300px;
+            }
+
+            .contact-container {
+                height: auto;
+                flex-direction: column;
+            }
+
+            .contact-image img {
+                max-width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="RichGrills_Logo_with_Warm_Neutrals-removebg-preview.png" height="40px" style="margin-top: -9px;margin-left: -25px;" onclick="location.href='index.html'">
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-us">
+        <h2>Contact Us</h2>
+        <div class="contact-details">
+            <div class="detail">
+                <img src="pictures/contact-us.png" alt="Contact Us">
+                <h3>Contact Details</h3>
+                <p>#26, 2nd Cross, Frazer Town, Bangalore - 560046</p>
+                <p>Email: <a href="mailto:contact@richgrills.com">contact@richgrills.com</a></p>
+                <p>Phone: <a href="tel:+919367822347">+91 93678 22347</a></p>
+            </div>
+            <div class="detail">
+                <img src="pictures/time.png" alt="Opening Hours">
+                <h3>Opening Hours</h3>
+                <p>Monday - Friday: 10:00 AM - 10:00 PM</p>
+                <p>Saturday - Sunday: 9:00 AM - 11:00 PM</p>
+                <br>
+                <br>
+            </div>
+            <div class="detail" style="padding-bottom: 38px;">
+                <img src="pictures/pin.png" alt="Location">
+                <h3>Our Location</h3>
+                <p>#26, 2nd Cross, Frazer Town, Bangalore - 560046, India</p>
+                <p>Find us on Google Maps!</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31109.53559181092!2d77.56485920978838!3d12.971598964743516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670e6c7e5b7%3A0x6d4b8a07bfa18d9f!2sBangalore%2C%20Karnataka%2C%20India!5e0!3m2!1sen!2sin!4v1696953901024!5m2!1sen!2sin"
+            width="900" height="400" style="border:0; border-radius: 40px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-image">
+            <img src="Richgrills_img.png" alt="Contact Us" />
+        </div>
+
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="#" method="post" onsubmit="showAlert(); return false;">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div>&copy; 2024 RichGrills | All Rights Reserved</div>
+        <div class="social-media">
+            <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+            <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+            <a href="https://www.twitter.com" target="_blank">Twitter</a>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

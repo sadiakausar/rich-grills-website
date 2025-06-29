@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <link rel="stylesheet" href="menustyles.css">
+  <link rel="shortcut icon" href="pictures/favicon-removebg-preview.png" type="image/x-icon">
+  <style>
+    body{
+      font-family: "Karla",sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="mainhead">
+    <nav>
+      <div class="logo">
+        <img src="RichGrills_Logo_with_Warm_Neutrals-removebg-preview.png" height="40px" style="margin-top: -9px;margin-left: -25px;" onclick="location.href='index.html'">
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <header>
+    <nav class="categories">
+      <a href="#breakfast" class="category ">Breakfast</a>
+      <a href="#snacks" class="category">Snacks</a>
+      <a href="#maincourse" class="category">Main Course</a>
+      <a href="#drinks" class="category">Drinks</a>
+      <a href="#desserts" class="category">Desserts</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Breakfast Section -->
+    <div id="breakfast" class="menu-section">
+      <br><br><br>
+      <h2>Breakfast</h2>
+      <div class="menu-items">
+        <!--  Menu Item 1 -->
+        <div class="menu-item">
+          <img src="menu-pics/chole.avif" alt="Chole Bhature">
+          <h3>Chole Bhature</h3>
+          <p>Spicy chickpea curry served with fluffy deep-fried bread.</p>
+          <span class="price">₹150</span>
+          <button class="order-button"  onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <!-- Menu Item 2 -->
+        <div class="menu-item">
+          <img src="menu-pics/masaladosa.jpg" alt="Masala Dosa">
+          <h3>Masala Dosa</h3>
+          <p>Crispy rice crepe filled with spiced potatoes, served with chutney and sambar.</p>
+          <span class="price">₹100</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <!-- Menu Item 3 -->
+        <div class="menu-item">
+          <img src="menu-pics/misalpav.webp" alt="Eggs Benedict">
+          <h3>Misal Pav</h3>
+          <p>Spicy sprouted bean curry served with buttered bread rolls.</p>
+          <span class="price">₹90</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+        <!-- Menu Item 4 -->
+        <div class="menu-item">
+          <img src="menu-pics/luchialoo.jpg" alt="Pancakes with Syrup">
+          <h3>Luchi with Aloo Dum</h3>
+          <p>Bengali-style deep-fried bread with a flavorful potato curry.</p>
+          <span class="price">₹120</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <!-- Menu Item 5 -->
+        <div class="menu-item">
+          <img src="menu-pics/alooparatha.jpg" alt="Pancakes with Syrup">
+          <h3>Aloo Paratha</h3>
+          <p>Soft, stuffed flatbread filled with spiced mashed potatoes, served with fresh curd and tangy pickle.</p>
+          <span class="price">₹120</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <!-- Menu Item 6 -->
+        <div class="menu-item">
+          <img src="menu-pics/idli.jpg" alt="Pancakes with Syrup">
+          <h3>Idli with Sambar </h3>
+          <p>Steamed rice cakes served with a flavorful lentil stew and fresh coconut chutney.</p>
+          <span class="price">₹90</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <!-- Menu Item 7 -->
+        <div class="menu-item">
+          <img src="menu-pics/pongal.jpg" alt="Pancakes with Syrup" width="100px">
+          <h3>Pongal</h3>
+          <p>South Indian rice and lentil dish flavored with ghee, pepper, and cashews.</p>
+          <span class="price">₹80</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <!-- Menu Item 8 -->
+        <div class="menu-item">
+          <img src="menu-pics/moong.jpg" alt="Pancakes with Syrup">
+          <h3>Moong Dal Dosa</h3>
+          <p>Thin, crispy crepe made from ground moong dal, served with chutney and sambar.</p>
+          <span class="price">₹150</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+      </div>
+    </div>
+
+     <!-- Snacks Section -->
+     <div id="snacks" class="menu-section">
+      <br>
+      <h2>Snacks</h2>
+      <div class="menu-items">
+        <div class="menu-item">
+          <img src="menu-pics/pani-puri.jpg" alt="Red Wine">
+          <h3>Pani Puri </h3>
+          <p>Crisp puris with tangy spiced water.</p>
+          <span class="price">₹60</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="menu-pics/dahi-puri.webp" alt="Red Wine">
+          <h3>Dahi Puri</h3>
+          <p>Crispy puris topped with spiced yogurt.</p>
+          <span class="price">₹80</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="menu-pics/Masala-Puri-Chaat.jpg" alt="Red Wine">
+          <h3>Masala Puri Chaat</h3>
+          <p>Tangy tamarind gravy with crispy puris.</p>
+          <span class="price">₹80</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="menu-pics/gobi-manchurian.jpg" alt="Red Wine">
+          <h3>Gobi Manchurian</h3>
+          <p>Indo-Chinese cauliflower tossed in sauces.</p>
+          <span class="price">₹120</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="menu-pics/papdi-chaat.jpg" alt="Red Wine">
+          <h3>Papdi Chaat</h3>
+          <p>Crispy papdis with yogurt and chutneys.</p>
+          <span class="price">₹90</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="menu-pics/momos.jpg" alt="Red Wine">
+          <h3>Tandoori Momos</h3>
+          <p>Dumplings infused with Indian spices.</p>
+          <span class="price">₹180</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="menu-pics/pizza.jpg" alt="Red Wine">
+          <h3>Tandoori Paneer Pizza</h3>
+          <p>Flatbread topped with spiced paneer.(Serves 6)</p>
+          <span class="price">₹250</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="menu-pics/burger.jpg" alt="Red Wine">
+          <h3>Masala Aloo Tikki Burger</h3>
+          <p>Spiced potato patty in a soft bun.</p>
+          <span class="price">₹90</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+      </div>
+    </div>
+
+<!-- Main Course -->
+    <div id="maincourse" class="menu-section">
+      <br>
+      <h2>Main Course</h2>
+      <div class="menu-items">
+        <div class="menu-item">
+          <img src="menu-pics/hyd-biryani.jpg" alt="Grilled Chicken Salad">
+          <h3>Hyderabadi Biryani</h3>
+          <p>Fragrant rice layered with spiced meat, served with raita and brinjal curry.</p>
+          <span class="price">₹530</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="menu-pics/biryani-platter.webp" alt="Grilled Chicken Salad">
+          <h3>Royal Biryani Platter</h3>
+          <p>Aromatic rice layered with tender meat, served with raita, brinjal curry, salad, and a sweet touch of gulab
+            jamun.</p>
+          <span class="price">₹600</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="menu-pics/butter-chicken.jpg" alt="Grilled Chicken Salad">
+          <h3>Butter Chicken</h3>
+          <p>Creamy chicken curry with fragrant rice.</p>
+          <span class="price">₹250</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="menu-pics/rajma.jpg" alt="Grilled Chicken Salad">
+          <h3>Rajma Chawal Delight</h3>
+          <p>Kidney beans curry with steamed rice.</p>
+          <span class="price">₹180</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="menu-pics/paneer-tikka.jpg" alt="Grilled Chicken Salad">
+          <h3>Paneer Tikka Masala</h3>
+          <p>Charred paneer in rich tomato gravy with Roti</p>
+          <span class="price">₹180</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="menu-pics/chilli-chicken.jpg" alt="Grilled Chicken Salad">
+          <h3>Spicy Chilli Chicken</h3>
+          <p>Indo-Chinese chicken</p>
+          <span class="price">₹200</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="menu-pics/dal-makhani.jpg" alt="Grilled Chicken Salad">
+          <h3>Dal Makhani</h3>
+          <p>Creamy black lentils with cumin rice.</p>
+          <span class="price">₹180</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="menu-pics/shahi-paneer.jpg" alt="Grilled Chicken Salad">
+          <h3>Shahi Paneer</h3>
+          <p>Mughlai paneer curry with soft butter naan.</p>
+          <span class="price">₹250</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="menu-pics/chicken-m-h.jpg" alt="Grilled Chicken Salad">
+          <h3>Chicken Malai Handi</h3>
+          <p>Creamy chicken curry cooked in a handi with naan</p>
+          <span class="price">₹280</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="menu-pics/angari-chicken.jpg" alt="Grilled Chicken Salad">
+          <h3>Angari Chicken</h3>
+          <p>Spicy grilled chicken with charred naan.</p>
+          <span class="price">₹200</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="menu-pics/mandi.jpg" alt="Grilled Chicken Salad">
+          <h3>Chicken Mandi</h3>
+          <p>Arabian-style spiced rice with tender meat.</p>
+          <span class="price">₹450</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="menu-pics/keema-matar.jpg" alt="Grilled Chicken Salad">
+          <h3>Keema Matar</h3>
+          <p>Spiced minced meat and peas curry with Roti</p>
+          <span class="price">₹140</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="menu-pics/lamb-chops.avif" alt="Grilled Chicken Salad">
+          <h3>Lamb Chops</h3>
+          <p>Juicy chops with Spinach Rice </p>
+          <span class="price">₹380</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="menu-pics/hyd-chicken.jpg" alt="Grilled Chicken Salad">
+          <h3>Hyderabadi Chicken</h3>
+          <p>Spiced chicken curry with flavorful rice.</p>
+          <span class="price">₹300</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="menu-pics/malai-kofta.jpg" alt="Grilled Chicken Salad">
+          <h3>Malai Kofta</h3>
+          <p>Creamy dumplings in rich cashew gravy, paired with soft naan.</p>
+          <span class="price">₹350</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="menu-pics/seekh-kabab.jpg" alt="Grilled Chicken Salad">
+          <h3>Lucknowi Seekh Kebab</h3>
+          <p>Minced meat kebabs infused with aromatic spices, served with delicate roomali roti.</p>
+          <span class="price">₹180</span>
+          <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+        </div>
+
+      </div>
+
+
+
+
+      <!-- Drinks Section -->
+      <div id="drinks" class="menu-section">
+        <br>
+        <h2>Drinks</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <img src="menu-pics/chai.jpg" alt="Fresh Juice">
+            <h3>Chai</h3>
+            <p>Freshly brewed tea with milk and sugar.</p>
+            <span class="price">₹50</span>
+            <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+          </div>
+
+          <div class="menu-item">
+            <img src="menu-pics/coffee.jpg" alt="Fresh Juice">
+            <h3>Coffee</h3>
+            <p>Rich, aromatic coffee served hot.</p>
+            <span class="price">₹50</span>
+            <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+          </div>
+
+          <div class="menu-item">
+            <img src="menu-pics/lemonade.jpg" alt="Fresh Juice">
+            <h3>Zesty Fresh Lemonade</h3>
+            <p>Fresh lime juice with sugar and mint.</p>
+            <span class="price">₹80</span>
+            <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+          </div>
+
+          <div class="menu-item">
+            <img src="menu-pics/lassi.jpg" alt="Fresh Juice">
+            <h3>Lassi</h3>
+            <p>Thick yogurt drink, sweet or salted.</p>
+            <span class="price">₹80</span>
+            <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+          </div>
+
+          <div class="menu-item">
+            <img src="menu-pics/mojito.jpg" alt="Fresh Juice">
+            <h3>Mint Mojito</h3>
+            <p>Lemon, mint, and soda cooler.</p>
+            <span class="price">₹150</span>
+            <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+          </div>
+
+          <div class="menu-item">
+            <img src="menu-pics/tender-coconut.jpg" alt="Fresh Juice">
+            <h3>Tender Coconut Elixir</h3>
+            <p>Chilled natural coconut water.</p>
+            <span class="price">₹100</span>
+            <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+          </div>
+
+          <div class="menu-item">
+            <img src="menu-pics/fruit-shakes.jpg" alt="Fresh Juice">
+            <h3>Exotic Fruit Shakes</h3>
+            <p>Creamy shakes in mango, apple, banana, or chikoo flavors.</p>
+            <span class="price">₹180</span>
+            <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+          </div>
+
+          <div class="menu-item">
+            <img src="menu-pics/falooda.jpg" alt="Fresh Juice">
+            <h3> Falooda with Ice Cream</h3>
+            <p>Layered dessert drink with rose syrup, vermicelli, and ice cream..</p>
+            <span class="price">₹180</span>
+            <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Desserts Section -->
+      <div id="desserts" class="menu-section">
+        <br>
+        <h2>Desserts</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <img src="menu-pics/gulan-jamun.jpg" alt="Chocolate Cake">
+            <h3>Gulab Jamun</h3>
+            <p>Soft and golden milk solids (khoya) balls soaked in warm, fragrant sugar syrup.</p>
+            <span class="price">₹150</span>
+            <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+          </div>
+
+          <div class="menu-item">
+            <img src="menu-pics/Shahi-Tukda.avif" alt="Chocolate Cake">
+            <h3>Shahi Tukda</h3>
+            <p>Crispy fried bread soaked in saffron syrup, topped with creamy malai and nuts.</p>
+            <span class="price">₹120</span>
+            <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+          </div>
+
+          <div class="menu-item">
+            <img src="menu-pics/rasgulla.jpg" alt="Chocolate Cake">
+            <h3>Rasgulla</h3>
+            <p>Soft and juicy milk-based treats soaked in lightly flavored sugar syrup.</p>
+            <span class="price">₹150</span>
+            <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+          </div>
+
+          <div class="menu-item">
+            <img src="menu-pics/rasmalai.jpg" alt="Chocolate Cake">
+            <h3>Ras Malai</h3>
+            <p>Soft, melt-in-mouth milk cakes served in creamy saffron and cardamom-flavored milk.</p>
+            <span class="price">₹120</span>
+            <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+          </div>
+
+          <div class="menu-item">
+            <img src="menu-pics/kheer.jpg" alt="Chocolate Cake">
+            <h3>Shahi Kesari Kheer</h3>
+            <p>A royal saffron-infused rice pudding enriched with dry fruits and nuts.</p>
+            <span class="price">₹200</span>
+            <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+          </div>
+
+          <div class="menu-item">
+            <img src="menu-pics/brownie.jpg" alt="Chocolate Cake">
+            <h3>Brownie with Ice Cream</h3>
+            <p>Gooey brownie served with a scoop of velvety vanilla ice cream.</p>
+            <span class="price">₹180</span>
+            <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+          </div>
+
+          <div class="menu-item">
+            <img src="menu-pics/lava-cake.jpg" alt="Chocolate Cake">
+            <h3>Chocolate Lava Cake</h3>
+            <p>A luxurious chocolate cake with a molten center.</p>
+            <span class="price">₹150</span>
+            <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+          </div>
+
+          <div class="menu-item">
+            <img src="menu-pics/mousse-2.jpg" alt="Chocolate Cake">
+            <h3> Chocolate Mousse</h3>
+            <p>A light and airy dessert crafted with smooth and creamy chocolate.</p>
+            <span class="price">₹150</span>
+            <button class="order-button" onclick="window.location.href='order.html'">Order now</button>
+          </div>
+
+
+        </div>
+      </div>
+  </main>
+
+  <footer style="font-size: 13px;">
+    <div>&copy; 2024 RichGrills | All Rights Reserved</div>
+    <div class="social-media">
+      <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+      <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+      <a href="https://www.twitter.com" target="_blank">Twitter</a>
+    </div>
+  </footer>
+  <script src="scripts.js">
+  </script>  
+</body>
+
+</html>

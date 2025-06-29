@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RichGrills - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="pictures/favicon-removebg-preview.png" type="image/x-icon">
+    <style>
+#hero {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+#hero h1 {
+    color: #FFF0DC;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+}
+
+#hero p {
+    color: #FFF0DC;
+    font-size: 1rem;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+#hero button {
+    font-family: "Karla", serif;
+    font-weight: 700;
+    background-color: #fff0dc;
+    color: #966b33;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+#hero button:hover {
+    background-color: #ffd6a0;
+    color: #4a371a;
+    transform: scale(1.09);
+}
+    </style>
+</head>
+
+<body
+    style="background: linear-gradient(rgba(0, 0, 0, 0.553), rgba(0, 0, 0, 0.214)), url('pictures/indian_food.jpg') no-repeat center center/cover;">
+    <header style="background-color:transparent;">
+        <nav>
+            <div class="logo">
+                <img src="RichGrills_Logo_with_Warm_Neutrals-removebg-preview.png" height="40px" style="margin-top: -9px;margin-left: -25px;" onclick="location.href='index.html'">
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+            <ul class="menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="hero">
+        <div class="hero-content">
+            <h1 class="black-text">Welcome to RichGrills – A Taste of Royal Flame</h1>
+            <p class="black-text">Savor the richness of grilled perfection, crafted for every craving.</p>
+            <button onclick="location.href='menu.html'">Explore Menu</button>
+            <button onclick="location.href='reservations.html'">Dine with Us</button>
+        </div>
+    </section>
+<br><br><br>
+
+</div>
+    <footer style="background-color:transparent; padding-top: 30px; font-size: 13px;">
+        <div>&copy; 2024 RichGrills | All Rights Reserved</div>
+        <div class="social-media">
+            <a href="https://www.instagram.com" target="_blank">Instagram</a> | 
+            <a href="https://www.facebook.com" target="_blank">Facebook</a> | 
+            <a href="https://www.twitter.com" target="_blank">Twitter</a>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    
+</body>
+
+</html>

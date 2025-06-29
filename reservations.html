@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Duo Kitchen - Reservations</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="pictures/favicon-removebg-preview.png" type="image/x-icon">
+    
+<style>
+    body {
+        font-family: "Karla", sans-serif;
+        background-image: url(pictures/reservation-img.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        position: relative;
+    }
+    
+    body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.598);
+        z-index: -1;
+    }
+    
+    #reservations {
+        text-align: center;
+        padding: 40px 20px;
+        flex-grow: 1;
+    }
+    
+    #reservations h2 {
+        font-size: 2rem;
+        color:#ffedcc;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+        background-color: #00000016;
+    }
+    
+    #reservations form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        max-width: 450px;
+        margin: 0 auto;
+        background: linear-gradient(to bottom right, #ffedcc55, #ffe4b534);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    #reservations input,
+    #reservations button {
+        padding: 10px 13px;
+        font-size: 1rem;
+        width: 100%;
+        border: 1px solid #d9a7699e;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+    }
+    
+    #reservations input{
+        color: #6b4f32;
+        background-color: #f9f3e8;
+    }
+    
+    #reservations input::placeholder {
+        color: #6b4f32;
+        opacity: 1;
+    }
+    
+    #reservations input:focus {
+        outline: none;
+        border-color: #6b4f32;
+        box-shadow: 0 4px 10px rgba(107, 79, 50, 0.2);
+    }
+    
+    #reservations button {
+        background-color: #d9a769ea;
+        color: beige;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+    }
+    
+    #reservations button:hover {
+        background-color:#d9a769;
+        color:#6b4f32;
+        transform: scale(1.02);
+    }
+    
+    #reservations button:active {
+        transform: scale(0.98);
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    
+    @media (max-width: 768px) {
+        #reservations h2 {
+            font-size: 1.5rem;
+        }
+    
+        #reservations form {
+            padding: 20px;
+            width: 90%;
+        }
+    
+        #reservations input,
+        #reservations button {
+            font-size: 0.9rem;
+            padding: 10px;
+        }
+    
+        .logo img {
+            height: 50px;
+        }
+    
+        .hamburger {
+            display: block;
+            font-size: 1.5rem;
+        }
+    
+        .menu {
+            display: none;
+            list-style-type: none;
+            padding: 0;
+        }
+    
+        .menu.show {
+            display: block;
+            text-align: center;
+        }
+    
+        .menu li {
+            margin: 10px 0;
+        }
+    
+        .menu a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+    
+        footer {
+            font-size: 12px;
+            text-align: center;
+            padding: 10px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        #reservations h2 {
+            font-size: 1.2rem;
+        }
+    
+        .hamburger {
+            font-size: 2rem;
+        }
+    
+        #reservations form {
+            width: 95%;
+        }
+    }
+    
+    footer {
+        font-size: 13px;
+        margin-top: auto;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .social-media a {
+        color: #333;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+    
+    .social-media a:hover {
+        color: #d9a769;
+    }
+    
+    #reservations .reservation-info {
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 50px;
+        text-align: center;
+        font-size: 0.95rem;
+        background-color: #00000016;
+        padding: 30px 0px;
+    }
+    
+    #reservations .reservation-info h3{
+        color: #ffedcc;
+        font-weight: 600;
+        font-size: 18px;
+    }
+    
+    #reservations .reservation-info p{
+        color: #fee3c3;
+        font-weight: 500;
+        font-size: 12px;
+    }
+    
+    #reservations .download-btn {
+        background-color: #9e5f0cd1;
+        color: beige;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 15px;
+        width: fit-content;
+    }
+    
+    #reservations .download-btn:hover {
+        background-color:#d9a769;
+        color:#6b4f32;
+    }
+
+</style>    
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="RichGrills_Logo_with_Warm_Neutrals-removebg-preview.png" height="40px" style="margin-top: -9px;margin-left: -25px;" onclick="location.href='index.html'">
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="reservations.html" class="active">Reservations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="reservations">
+        <h2>Reservations</h2>
+        </p>
+        <form id="reservationForm">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required pattern="[0-9]{10}" maxlength="10">
+            <input type="date" id="reservationDate" required >
+            <input type="time" id="reservationTime" required>
+            <input type="number" id="partySize" placeholder="Party Size (2-10)" min="2" max="10" required>
+            <button type="submit">Reserve Now</button>
+        </form>
+
+        <div class="reservation-info">
+            <h3>Download Our Reservation Policy</h3>
+            <p>For more details on reservation timings, cancellations, group bookings, and more, please download our
+                full reservation policy below:</p>
+            <a href="RichGrills - Reservation Policy.pdf" download="RichGrills - Reservation Policy.pdf">
+                <button class="download-btn">Download Reservation Policy</button>
+            </a>
+        </div>
+    </section>
+
+    <div id="customAlert" class="alert-box">
+        <button class="close-btn" onclick="closeAlert()">×</button>
+        <p id="alertMessage"></p>
+    </div>
+
+
+    <footer>
+        <div>&copy; 2024 RichGrills | All Rights Reserved</div>
+        <div class="social-media">
+            <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+            <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+            <a href="https://www.twitter.com" target="_blank">Twitter</a>
+        </div>
+    </footer>
+
+    <script>
+       
+        const dateInput = document.getElementById('reservationDate');
+        const today = new Date().toISOString().split('T')[0]; 
+        dateInput.setAttribute('min', today);
+
+        
+        const timeInput = document.getElementById('reservationTime');
+        timeInput.setAttribute('min', '09:00');
+        timeInput.setAttribute('max', '23:00');
+
+        
+        document.getElementById('reservationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const reservationDate = document.getElementById('reservationDate').value;
+            const reservationTime = document.getElementById('reservationTime').value;
+            const partySize = document.getElementById('partySize').value;
+
+            if (!reservationDate || !reservationTime) {
+                alert('Please select a valid date and time for your reservation.');
+                return;
+            }
+
+            alert(`Your reservation has been successfully made for ${reservationTime} on ${reservationDate} with a party size of ${partySize}.`);
+            document.getElementById('reservationForm').reset();
+        });
+    </script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

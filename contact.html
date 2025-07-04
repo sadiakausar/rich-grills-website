@@ -7,6 +7,7 @@
     <title>RichGrills - Contact Us</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="favicon-removebg-preview.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <style>
         body {
             font-family: "Karla",sans-serif;
@@ -265,11 +266,12 @@
     </footer>
 
     <script src="scripts.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script>
   const form = document.getElementById('contact-form');
 
   form.addEventListener('submit', async (e) => {
-    e.preventDefault();                    
+    e.preventDefault();
     const data = new FormData(form);
 
     try {
@@ -280,13 +282,34 @@
       });
 
       if (res.ok) {
-        alert('Thanks! Your message has been sent.');
-        form.reset();                      
+        Toastify({
+          text: "Thanks! Your message has been sent.",
+          duration: 4000,
+          gravity: "top",       
+          position: "center",   
+          backgroundColor: "#c9a063",
+          style: { color: "#fff", fontWeight: "bold" }
+        }).showToast();
+        form.reset();
       } else {
-        alert('Sorry, something went wrong.');
+        Toastify({
+          text: "Sorry, something went wrong.",
+          duration: 4000,
+          gravity: "top",
+          position: "center",
+          backgroundColor: "#d9534f",
+          style: { color: "#fff", fontWeight: "bold" }
+        }).showToast();
       }
     } catch (err) {
-      alert('Network error — please try again later.');
+      Toastify({
+        text: "Network error — please try again later.",
+        duration: 4000,
+        gravity: "top",
+        position: "center",
+        backgroundColor: "#d9534f",
+        style: { color: "#fff", fontWeight: "bold" }
+      }).showToast();
     }
   });
 </script>

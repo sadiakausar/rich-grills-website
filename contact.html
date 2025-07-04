@@ -224,20 +224,35 @@
         </div>
 
         <div class="contact-form">
-            <h2>Contact Us</h2>
-            <form action="#" method="post" onsubmit="showAlert(); return false;">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+  <h2>Contact Us</h2>
+  <form id="contact-form"
+        action="https://formspree.io/f/xeokdywr"
+        method="POST">
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <label for="name">Name:</label>
+    <input type="text"
+           id="name"
+           name="name"
+           placeholder="Enter your name"
+           required>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+    <label for="email">Email:</label>
+    <input type="email"
+           id="email"
+           name="email"
+           placeholder="Enter your email"
+           required>
 
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+    <label for="message">Message:</label>
+    <textarea id="message"
+              name="message"
+              rows="5"
+              placeholder="Write your message"
+              required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
     </div>
 
     <footer>
